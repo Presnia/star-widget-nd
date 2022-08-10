@@ -21,15 +21,19 @@ const StarRating = ({
     const [rating, setRating] = useState(defaultState);
     const [hover, setHover] = useState(null);
 
-    const setRatingFn = (value) => {
+    const setRatingFn = (e) => {
         if (readOnly) return;
+
+        const value = e.currentTarget.dataset.star;
 
         setRating(value);
         onChangeValue(value);
     }
 
-    const setHoverFn = (value) => {
+    const setHoverFn = (e) => {
         if (readOnly) return;
+
+        const value = e.type === 'mouseleave' ? null : e.currentTarget.dataset.star;
 
         setHover(value);
         onChangeHover(value);
