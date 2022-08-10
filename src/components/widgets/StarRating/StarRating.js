@@ -75,8 +75,8 @@ StarRating.propTypes = {
 
 StarRating.defaultProps = {
     defaultState: 0,
-    emptyColor: "grey",
-    fillColor: "#edaa10",
+    emptyColor: "lightgray",
+    fillColor: "#ffbc5a",
     height: 53,
     labelText: (value) => `Rating is: ${value}`,
     maxValue: 5,
